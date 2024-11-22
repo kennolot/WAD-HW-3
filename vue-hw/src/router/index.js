@@ -1,18 +1,31 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import HtmlLoader from '../components/HtmlLoader.vue'; // for laoding static html files.
 
-const Home = () => import(''); // fixida
-const AddPost = () => import('');
-const SignUp = () => import('');
 
+//import MainPage from '../views/MainPage.vue'
+//import SignupPage from '../views/SignupPage.vue'
 
 const routes = [
-    { path: '/', name: 'Home', component: Home },
-    { path: '/addPost', name: 'AddPost', component: AddPost },
-    { path: '/signup', name: 'SignUp', component: SignUp }
-  ];
+  {
+    path: '/',
+    component: HtmlLoader,
+    props: { htmlFile: '/index.html' },
+  },
+  {
+    path: '/addPost',
+    component: HtmlLoader,
+    props: { htmlFile: '/addPost.html' },
+  },
+  {
+    path: '/signup',
+    component: HtmlLoader,
+    props: { htmlFile: '/signup.html' },
+  },
+];
 
 const router = createRouter({
-history: createWebHistory(),
-routes,
+  history: createWebHistory(),
+  routes,
 });
+
 export default router;

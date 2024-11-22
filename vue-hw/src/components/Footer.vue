@@ -1,11 +1,13 @@
 <template>
         <footer>
-        <p>Footer Homework3</p>
+        <p>&copy; Homework3 All rights reserved.</p>
         </footer>    
 </template>
 
 <script>
-export default {};
+export default {
+        name: 'Footer',
+};
 </script>
 
   
