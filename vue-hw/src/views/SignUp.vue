@@ -1,4 +1,6 @@
 <template>
+  <div>
+    <Header />
     <div class="signup-container">
       <div class="signup-form-wrapper">
         <h2>Create an Account</h2>
@@ -14,10 +16,19 @@
         </form>
       </div>
     </div>
+
+    <Footer />
+  </div>
+    
   </template>
 
   <script>
+
+  import Header from '../components/Header.vue';
+  import Footer from '../components/Footer.vue';
+  import UserPost from '../components/UserPost.vue';
   export default {
+
     name: 'SignUp',
     data() {
       return {
