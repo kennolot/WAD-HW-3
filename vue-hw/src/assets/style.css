@@ -17,7 +17,9 @@ header, footer {
     background-color: #1d1d1d;
     padding: 0;
     font-size: 1.2em;
+    
 }
+
 p {
     color: rgb(202, 202, 202);
 }
@@ -258,5 +260,3 @@ nav > div { /* usage of child selector */
         width: 90%;
     }
 }
-
-

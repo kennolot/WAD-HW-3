@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page-container" >
     <Header />
     <div class="signup-container">
       <div class="signup-form-wrapper">
@@ -30,6 +30,7 @@
   export default {
 
     name: 'SignUp',
+    components: { Header, Footer },
     data() {
       return {
         formData: {
@@ -78,17 +79,32 @@
   </script>
 
   <style scoped>
+
+  
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
   .signup-container {
-    margin: 0 auto;
-    padding: 2rem;
+  flex: 1;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  padding: 2rem;
+  background: black;
+    
   }
 
   .signup-form-wrapper {
     max-width: 500px;
-    margin: 0 auto;
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
+  width: 100%;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
   }
 
   h2 {
@@ -129,4 +145,12 @@
   button:hover {
     background-color: #357abd;
   }
+
+  footer {
+  background-color: #1d1d1d;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
   </style>
